@@ -1,6 +1,57 @@
 var bypass = {};
 
+bypass.initImportExport = function() {
+
+  document.getElementById('panelImportExport').classList.remove('hidden');
+
+  document.getElementById('importButton').onclick = bypass.import;
+  document.getElementById('exportButton').onclick = bypass.export;
+
+  document.getElementById('importInput').onchange = function(event) {
+
+    var file = this.files[0];
+
+    if (file.size > 400) {
+      return alert('Invalid file');
+    }
+
+    var reader = new FileReader();
+
+    reader.addEventListener('load', function(e) {
+      var expiration = new Date();
+
+      expiration.setUTCFullYear(expiration.getUTCFullYear() + 5);
+      document.cookie = 'bypass=' + e.target.result.trim()
+          + '; path=/; expires=' + expiration.toString();
+    });
+
+    reader.readAsBinaryString(file);
+
+  };
+
+};
+
+bypass.import = function() {
+  document.getElementById('importInput').click();
+};
+
+bypass.export = function() {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,'
+      + encodeURIComponent(api.getCookies().bypass));
+  element.setAttribute('download', 'bypass.txt');
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+};
+
 bypass.init = function() {
+
+  bypass.initImportExport();
 
   if (!crypto.subtle || JSON.parse(localStorage.noJsValidation || 'false')) {
     return;
