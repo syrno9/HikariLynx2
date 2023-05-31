@@ -29,43 +29,68 @@
 
       <legend>Global Management</legend>
 
-      <form
-        id="purgeBypassesForm"
-        method="post"
-        enctype="multipart/form-data"
-        action="/purgeBypasses.js">
+      <div id="extraBypassesToolsDiv">
 
-        <label>
-          <input
-            type="checkbox"
-            class="purgeField"
-            id="checkboxPurgeUnused"
-            name="unused">
-          Only purge unused
-        </label>
+        <form
+          method="post"
+          enctype="multipart/form-data"
+          action="/purgeBypasses.js">
 
-        <label>
-          <input
-            type="number"
-            class="purgeField"
-            id="fieldPurgeLimit"
-            name="timeLimit">
-          Do not purge bypasses older than this many hours.
-        </label>
+          <label>
+            <input
+              type="checkbox"
+              class="purgeField"
+              id="checkboxPurgeUnused"
+              name="unused">
+            Only purge unused
+          </label>
 
-        <label>
-          <input
-            class="purgeField"
-            type="checkbox"
-            id="checkboxPurgeConfirm"
-            name="confirmation">
-          Yes, I am sure I want to purge block bypasses.
-        </label>
+          <label>
+            <input
+              type="number"
+              class="purgeField"
+              id="fieldPurgeLimit"
+              name="timeLimit">
+            Do not purge bypasses older than this many hours.
+          </label>
 
-        <button
-          id="purgeBypassesButton"
-          type="submit">Purge block bypasses</button>
-      </form>
+          <label>
+            <input
+              class="purgeField"
+              type="checkbox"
+              id="checkboxPurgeConfirm"
+              name="confirmation">
+            Yes, I am sure I want to purge block bypasses.
+          </label>
+
+          <button
+            id="purgeBypassesButton"
+            type="submit">Purge block bypasses</button>
+        </form>
+
+        <hr>
+
+        <form
+          method="post"
+          enctype="multipart/form-data"
+          action="/disableNewBypasses.js">
+
+          <label>
+            <input
+              class="disableBypassesField"
+              type="checkbox"
+              id="checkboxDisableNewBypasses"
+              name="disableNewBypasses">
+            Disable the creation of new bypasses.
+          </label>
+
+          <button
+            id="disableBypassesButton"
+            type="submit">Save</button>
+
+        </form>
+
+      </div>
 
       <form
         id="addStaffForm"

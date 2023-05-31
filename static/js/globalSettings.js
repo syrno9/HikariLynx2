@@ -35,6 +35,10 @@ globalSettings.init = function() {
       type : 'boolean',
       setting : 'noReportCaptcha',
     },
+    checkboxDisableNewBypasses : {
+      type : 'boolean',
+      setting : 'disableNewBypasses',
+    },
     checkboxRequireConfirmationForBoardCreation : {
       type : 'boolean',
       setting : 'requireConfirmationForBoardCreation',
@@ -533,6 +537,10 @@ globalSettings.init = function() {
     },
     comboBypassMode : {
       setting : 'bypassMode',
+      type : 'combo'
+    },
+    comboMinExtraBypassRole : {
+      setting : 'extraBypassMinRole',
       type : 'combo'
     },
     comboTorPostingLevel : {

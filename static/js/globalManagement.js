@@ -15,10 +15,13 @@ globalManagement.init = function() {
 
   }
 
-  if (document.getElementById('purgeBypassesForm')) {
+  if (document.getElementById('extraBypassesToolsDiv')) {
 
     api.convertButton('purgeBypassesButton', globalManagement.bypassPurge,
         'purgeField');
+    
+    api.convertButton('disableBypassesButton', globalManagement.disableNewBypasses,
+        'disableBypassesField');
 
   }
 
@@ -31,6 +34,19 @@ globalManagement.init = function() {
   }
 
 };
+
+globalManagement.disableNewBypasses = function() {
+
+  api.formApiRequest('disableNewBypasses', {disableNewBypasses:document.getElementById('checkboxDisableNewBypasses').checked}, function requestComplete(
+      status, data) {
+
+    if (status === 'ok') {
+      alert('Saved.');
+    } else {
+      alert(status + ': ' + JSON.stringify(data));
+    }
+  });
+}
 
 globalManagement.bypassPurge = function() {
 
