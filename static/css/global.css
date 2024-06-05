@@ -233,7 +233,7 @@ input, select, textarea {
   border: 1px double #07371F;
 }
 
-.dropzone, .selectedCell {
+.selectedCell {
   border: 2px dashed rgba(125, 125, 125, 0.4);
   background-color: rgba(200, 200, 200, 0.5);
   color: rgba(0, 0, 0, 0.5);
@@ -341,7 +341,7 @@ body.theme_clear {
 
 /* header and nav / top of page styles */
 header {
-  margin: 3em auto 0 auto;
+  margin: 1.6em auto 0 auto;
   text-align: center;
 }
 
@@ -353,7 +353,7 @@ nav {
   border-bottom: 1px solid #89A;
   padding-bottom: 3px;
   background-color: #D6DAF0;
-  font-size: 70%;
+  font-size: 10pt;
   text-align: center;
   z-index: 1;
 }
@@ -516,11 +516,6 @@ span.spoiler {
 
 .captchaTimer {
   font-size: 80%;
-}
-
-.wide, #postingForm input[type='text'], .modalTableBody input[type='text'],
-  .modalTableBody select {
-  width: 100%;
 }
 
 #redirect, #maint {

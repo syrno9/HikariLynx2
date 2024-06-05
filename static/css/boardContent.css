@@ -1,5 +1,5 @@
 /*Elements shown on board and thread pages*/
-.selectedCell, .dropzone {
+.selectedCell{
   top: 5px;
   text-align: center;
   margin-bottom: 5px;
@@ -17,7 +17,6 @@
 
 .dropzone {
   cursor: pointer;
-  transition: all 0.2s ease 0s;
 }
 
 .dragAndDropThumb {
@@ -57,19 +56,12 @@
 
 #newPostFieldset {
   display: inline-block;
-  padding-right: 0.75em;
-  width: 25em;
+  border: none;
+  padding:0;
 }
 
 #postingForm {
   text-align: center;
-  margin: 1em auto;
-}
-
-#postingForm button, #qrbutton {
-  width: 8em;
-  margin: 0.5em auto;
-  font-size: 125%;
 }
 
 .theme_cyber #postingForm button:active {
@@ -84,19 +76,6 @@
   font-size: 80%;
   display: block;
   clear: both;
-}
-
-input[type=checkbox].postingCheckbox {
-  display: none;
-}
-
-input[type=checkbox].postingCheckbox+label::before {
-  font-family: Icons;
-  content: "\e0db";
-  margin-right: 0.5em;
-  color: #117743;
-  display: inline-block;
-  cursor: pointer;
 }
 
 #checkboxSpoiler+label:after {
@@ -147,3 +126,11 @@ input[type=checkbox].postingCheckbox:checked+label:before {
     width: 60px;
   }
 }
+
+#blotterTable {
+  font-size: 70%;
+}
+
+
+
+

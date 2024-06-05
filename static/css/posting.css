@@ -212,8 +212,16 @@ video {
 
 /*Change the dimensions if you wish for larger thumbs*/
 .uploadCell img:not(.imgExpanded) {
-  max-width: 125px;
+  max-width: 250px;
+  max-height: 250px;
   object-fit: contain;
+}
+
+.divPosts .uploadCell img:not(.imgExpanded) {
+  max-width: 155px;
+  max-height: 155px;
+  height: auto;
+  width: auto;
 }
 
 .variableHeight {
@@ -293,8 +301,12 @@ video {
 }
 
 .boardHeader p#labelName {
-  font-size: 200%;
-  display: inline-block;
+  font-family: tahoma;
+  font-weight:bold;
+  color: #AF0A0F;
+  font-size: 18pt;
+  display: inline;
+  letter-spacing: -2px;
 }
 
 .boardHeader #favouriteButton {
@@ -302,7 +314,8 @@ video {
 }
 
 .boardHeader p#labelDescription {
-  font-size: 100%;
+  font-size: 80%;
+  margin-top: 5px;
 }
 
 .boardHeader a {
@@ -318,7 +331,7 @@ video {
 
 /*Actions form*/
 #threadList {
-  margin: 1em;
+  margin:0 1em;
 }
 
 #divMessage {
@@ -400,9 +413,8 @@ video {
 #postingForm th, .modalTableBody th {
   font-weight: bold;
   text-align: left;
-  width: 100px;
+  width: 70px;
   font-size: 80%;
-  padding-left: 0.3em;
   cursor: default;
   background: #98E;
 }

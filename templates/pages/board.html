@@ -34,6 +34,7 @@
   type="text/css"
   rel="stylesheet" />
 </head>
+
 <body>
 
   <script src="/.static/js/themeLoader.js"></script>
@@ -41,17 +42,19 @@
   <nav id="dynamicHeader"></nav>
 
   <header class="boardHeader">
-    <img id="bannerImage" />
-    <div>
-      <p id="labelName"></p>
-    </div>
+    <img id="bannerImage" width=300 height=100 />
+<div style="margin: -5px;">
+    <p id="labelName"></p>
+</div> 
     <p id="labelDescription"></p>
   </header>
-
+  <hr width="90%">
+  <div style="text-align: center;">
+    <a href="https://a.jlist.com/moe.php?id=3017_4_1_13" target="_blank" rel="nofollow"><img style="border:0px" src="https://a.jlist.com/media/banners/ecchi--wide.jpg" height="74" width="600" alt="Ecchi Products from Japan from J-List - Your Favorite Online Shop and Friend in Japan"></a></div>
+  <hr style="margin:5px 1em;">
   <div id="postingForm">
-
+  
     <fieldset id="newPostFieldset">
-      <legend>Mode: Thread</legend>
 
       <form
         action="/newThread.js"
@@ -60,20 +63,22 @@
 
         <table id="postingTable">
         </table>
-
-        <p class="small">
-          Remember to follow the
-          <a
-            href="rules.html"
-            class="rules">rules</a>
-        </p>
-
-        <button
-          type="submit"
-          id="formButton">Post</button>
-
+	  <div style="font-size: 70%;text-align: left">• Before posting, make sure to read the <a href="/rules">rules</a></div>
+      <div style="font-size: 70%;text-align: left">
+        • Max file size: <span id="labelMaxFileSize"></span> 
+      </div>
+      <div style="font-size: 70%;text-align: left">
+        • Max files: <span id="labelMaxFiles"></span>
+      </div>
+	 <div style="font-size: 70%;text-align: left">
+	  • Supported file types: GIF, JPG, PNG, WebM, OGG, SWF
+	  </div>
+	  <div style="font-size: 70%;text-align: left">
+	  • Images greater than 250x250 pixels will be thumbnailed
+	  </div>
       </form>
-
+      <hr style="margin: 5px 0 0;">
+      <table id="blotterTable"></table>
     </fieldset>
 
   </div>
@@ -83,8 +88,7 @@
     <div id="divMessage"></div>
   </div>
 
-  <div id="secondaryBar">
-
+  <span class="hidden">
     <span>[</span>
     <a
       href="#footer"
@@ -106,7 +110,11 @@
       id="linkRss"></a>
     <span>]</span>
   </div>
-
+  </span>
+  <hr style="margin:5px 1em;">
+  <div style="text-align: center">
+  <img src="/.static/ad.gif" width="468" height="60">
+  </div>
   <div id="threadList">
 
     <form

@@ -2,7 +2,8 @@
   "optional": {
     "dynamicHeader": "content/header.html",
     "postingTable": "content/postingForm.html",
-    "actionsForm": "content/actionsForm.html"
+    "actionsForm": "content/actionsForm.html",
+    "blotterTable": "content/blotter.html"
   },
   "templated": [
     "pages/about.html",

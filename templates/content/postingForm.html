@@ -6,27 +6,39 @@
         type="text"
         class="postingInput"
         id="fieldName"
-        name="name"></td>
+        name="name"
+        size="28"></td>
   </tr>
-
+  <tr>
+    <th>E-mail</th>
+    <td><input
+        type="text"
+        class="postingInput"
+        id="fieldEmail"
+        name="email"
+        size="28"></td>
+  </tr>
   <tr>
     <th>Subject</th>
     <td><input
         type="text"
         class="postingInput"
         id="fieldSubject"
-        name="subject">
+        name="subject"
+        size="35">
       <input
         name="boardUri"
         id="boardIdentifier"
-        type="hidden"></td>
+        type="hidden">  
+      <span><button type="submit" id="formButton" value="Submit">Submit</button></span>
+    </td>
   </tr>
 
   <tr>
-    <th>Message</th>
+    <th>Comment</th>
     <td><textarea
-        rows="5"
-        cols="35"
+        rows="4"
+        cols="52"
         class="postingInput"
         id="fieldMessage"
         name="message"></textarea>
@@ -42,13 +54,11 @@
       <div
         class="hidden"
         id="dragAndDropDiv">
-        <div
+        <button type="button"
           class="dropzone"
           id="dropzone">
-          Drag files to upload or
-          <br>
-          click here to select them
-        </div>
+          Browse...
+        </button>
         <div id="selectedDiv"></div>
       </div>
 
@@ -64,17 +74,23 @@
         type="checkbox"
         name="spoiler"
         class="postingCheckbox"
-        id="checkboxSpoiler"> <label for="checkboxSpoiler"></label>
+        id="checkboxSpoiler"><span class="small">Spoiler</span> 
 
-      <p class="small">
-        Max file size: <span id="labelMaxFileSize"></span>
-      </p>
-      <p class="small">
-        Max files: <span id="labelMaxFiles"></span>
-      </p>
 
     </td>
   </tr>
+
+  <tr>
+    <th>Password</th>
+    <td><input
+        id="fieldPostingPassword"
+        name="password"
+        class="postingInput"
+        type="password"
+        size="8">
+      <span class="small">(Password used for deletion)</span></td>
+  </tr>
+
 
   <tr id="captchaDiv">
 
@@ -104,34 +120,13 @@
 
       </div></td>
   </tr>
-
   <tr
-    class="hidden small"
+    class="none"
     id="formMore">
     <td>More</td>
   </tr>
-
 </tbody>
 <tbody id="extra">
-
-  <tr>
-    <th>E-mail</th>
-    <td><input
-        type="text"
-        class="postingInput"
-        id="fieldEmail"
-        name="email"></td>
-  </tr>
-
-  <tr>
-    <th>Password</th>
-    <td><input
-        id="fieldPostingPassword"
-        name="password"
-        class="postingInput"
-        type="password">
-      <p class="small">(used to delete files and postings)</p></td>
-  </tr>
 
   <tr>
     <th>Misc</th>
