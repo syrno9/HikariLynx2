@@ -1,10 +1,4 @@
 /*Elements used exclusively on board pages*/
-#linkPrevious:before {
-  font-family: Icons;
-  content: "\e035";
-  margin: 0 0.25em;
-}
-
 #linkLogs:before {
   content: "\e069"
 }
@@ -13,12 +7,44 @@
   vertical-align: middle;
 }
 
-#linkNext:after {
-  font-family: Icons;
-  content: "\e036";
-  margin: 0 0.25em;
-}
-
 .threadPages a {
   text-decoration: none
+}
+
+.bracket-list {
+  position: relative;
+  color: var(--text-color);
+}
+
+.bracket-list:not(:empty)::before {
+  content: "[";
+  padding-right: 2px;
+}
+.bracket-list:not(:empty)::after {
+  content: "]";
+  padding-left: 2px;
+}
+
+.bracket-list > *:not(:last-child)::after {
+  content: "][";
+  color: var(--text-color);
+  display: inline-block;
+  font-size: 100%;
+  pointer-events: none;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.bracket-button::before,
+.bracket-button::after {
+  color: var(--text-color);
+}
+
+.bracket-button::before {
+  content: "[";
+  margin-right: 2px;
+}
+.bracket-button::after {
+  content: "]";
+  margin-left: 2px;
 }

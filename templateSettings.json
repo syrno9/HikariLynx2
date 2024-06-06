@@ -3,7 +3,8 @@
     "dynamicHeader": "content/header.html",
     "postingTable": "content/postingForm.html",
     "actionsForm": "content/actionsForm.html",
-    "blotterTable": "content/blotter.html"
+    "blotterTable": "content/blotter.html",
+	"sidebar": "content/sidebar.html"
   },
   "templated": [
     "pages/about.html",

@@ -13,6 +13,8 @@
 
 #bannerImage {
   max-width: 100%;
+  border: 1px solid #82cece;
+  margin-bottom: 2px;
 }
 
 .dropzone {
@@ -22,11 +24,12 @@
 .dragAndDropThumb {
   max-height: 100px;
   max-width: 85px;
+  border: 1px solid #82cece;
 }
 
 .removeButton {
   cursor: pointer;
-  color: rgba(125, 125, 125, 0.5);
+  content: url(/.static/icons/h3cross.png);
   display: inline-block;
   margin-right: 5px;
   font-size: 20px;
@@ -129,6 +132,7 @@ input[type=checkbox].postingCheckbox:checked+label:before {
 
 #blotterTable {
   font-size: 70%;
+  width: 100%;
 }
 
 

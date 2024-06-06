@@ -1,10 +1,3 @@
-/*Used for places where posts are displayed*/
-.hideButton, .embedButton, #closeWatcherMenuButton, .watchButton,
-  .watchedCellCloseButton, .hideFileButton, .extraMenuButton,
-  #closeSettingsMenuButton {
-  margin-left: 0.5em;
-}
-
 .trashIndicator::before {
   content: "\E0CF";
   font-family: Icons;
@@ -81,22 +74,19 @@ video {
   cursor: pointer;
 }
 
-.extraMenuButton, .hideButton {
+.extraMenuButton, .hideButton, .watchButton {
   position: relative;
-}
-
-.hideButton::before {
-  content: '\e017';
+  top: 4px;
 }
 
 .postInfo, .opHead, .divMessage, .panelUploads, .panelIp, .panelProxyIp,
   .contentOmissionIndicator, .labelOmission, .labelId, .panelASN,
   .panelBypassId {
-  font-size: 80%;
+  font-size: 10pt;
 }
 
 .divPosts {
-  margin: 1em 0;
+  margin-left: -12px;
 }
 
 .postCell {
@@ -105,30 +95,14 @@ video {
 
 .linkName {
   font-weight: bold;
-  color: #34345c;
-}
-
-.theme_cyber .linkName {
-  color: #34ED97;
-}
-
-.linkName:hover {
-  color: #AA0000;
+  color: #82cece;
 }
 
 .noEmailName, .noEmailName:hover {
-  color: #117743;
+  color: #82cece;
   text-shadow: none;
-  cursor: default;
+  cursor: auto;
   text-decoration: none;
-}
-
-.theme_cyber .noEmailName, .noEmailName:hover {
-  color: #117743;
-}
-
-.theme_clear .noEmailName, .noEmailName:hover {
-  color: #117743;
 }
 
 .quoteLink, .theme_cyber .quoteLink {
@@ -136,11 +110,8 @@ video {
 }
 
 .linkSelf {
-  text-decoration: none;
-}
-
-.theme_cyber .linkSelf {
-  color: #ACACAC;
+  text-decoration: underline;
+  color: #acacac;
 }
 
 .linkSelf:hover {
@@ -148,11 +119,8 @@ video {
 }
 
 .linkQuote {
-  text-decoration: none;
-}
-
-.theme_cyber .linkQuote {
-  color: #ACACAC;
+  text-decoration: underline;
+  color: #acacac;
 }
 
 .linkQuote:hover {
@@ -160,13 +128,9 @@ video {
 }
 
 .labelSubject {
-  color: #0f0c5d;
+  color: #8181a9;
   font-weight: bold;
   word-wrap: break-word;
-}
-
-.theme_cyber .labelSubject {
-  color: #34ED3A;
 }
 
 .labelRole {
@@ -239,16 +203,17 @@ video {
 }
 
 .uploadDetails {
-  margin-bottom: 0.5em;
+  /*! margin-bottom: 0.5em; */
 }
 
 .originalNameLink {
   display: inline-block;
-  vertical-align: top;
-  max-width: 155px;
+  vertical-align: bottom;
+  max-width: 150px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  flex-shrink: 1;
 }
 
 .originalNameLink:hover {
@@ -260,8 +225,13 @@ video {
 }
 
 .panelBacklinks a {
-  color: #AA0000;
-  text-decoration: none;
+  color: #fffab2;
+  text-decoration: underline;
+  font-size: 90%;
+}
+
+.panelBacklinks a:hover {
+  color: #ff0000;
 }
 
 .hideLink {
@@ -276,9 +246,7 @@ video {
 }
 
 .labelLastEdit {
-  font-size: 80%;
-  margin-top: 0.75em;
-  margin-left: 0.75em;
+  display: none;
 }
 
 .contentOmissionIndicator {
@@ -288,6 +256,7 @@ video {
 .labelOmission {
   margin-top: 0.5em;
   margin-left: 0.5em;
+  font-size: 70%;
 }
 
 .imgFlag {
@@ -297,7 +266,7 @@ video {
 
 /*Board header*/
 .boardHeader p {
-  color: #663E11;
+  color: #AF0A0F;
 }
 
 .boardHeader p#labelName {
@@ -349,19 +318,19 @@ video {
 }
 
 .extraMenuButton::before {
-  content: '\e02f';
+  content: url(/.static/icons/h3menu.png);
 }
 
 .nameLink::after {
-  content: 'Open file';
+  content: url(/.static/icons/h3open.png);
 }
 
 .hideFileButton::after {
-  content: '(Hide file)';
+  content: url(/.static/icons/h3minus.png);
 }
 
 .hiddenFile::after {
-  content: '(Show file)';
+  content: url(/.static/icons/h3plus.png);
 }
 
 .modalPanel {
@@ -416,7 +385,9 @@ video {
   width: 70px;
   font-size: 80%;
   cursor: default;
-  background: #98E;
+  background: #182f3f;
+  border: 1px solid #82cece;
+  border-radius: 5px;
 }
 
 .theme_cyber #postingForm th, .theme_cyber .modalTableBody th {

@@ -39,8 +39,11 @@
 
   <script src="/.static/js/themeLoader.js"></script>
 
+  <div class="sidebar-wrapper-ontop">
+  <div id="sidebar"></div>
+  </div>
+  <div class="content-wrapper">
   <nav id="dynamicHeader"></nav>
-
   <header class="boardHeader">
     <img id="bannerImage" width=300 height=100 />
 <div style="margin: -5px;">
@@ -50,7 +53,7 @@
   </header>
   <hr width="90%">
   <div style="text-align: center;">
-    <iframe src="/php/rotatingImage.php" scrolling="no" width="600" height="74" frameborder="0"></iframe></div>
+    <iframe src="/php/rotatingImage.php" class="banner" scrolling="no" width="600" height="74" frameborder="0"></iframe></div>
   <hr style="margin:5px 1em;">
   <div id="postingForm">
   
@@ -109,12 +112,10 @@
       class="coloredIcon"
       id="linkRss"></a>
     <span>]</span>
-  </div>
   </span>
   <hr style="margin:5px 1em;">
   <div style="text-align: center">
-  <iframe src="/php/rotatingImage2.php" scrolling="no" width="468" height="60" frameborder="0"></iframe></div>
-  </div>
+  <iframe src="/php/rotatingImage2.php" class="banner" scrolling="no" width="468" height="60" frameborder="0"></iframe></div>
   <div id="threadList">
 
     <form
@@ -128,8 +129,8 @@
 
       <div class="threadPages">
 
-        <span class="divPages">[ <a id="linkPrevious"></a> <span
-          id="divPages"></span> <a id="linkNext"></a> ]
+        <span class="divPages"> <a id="linkPrevious"><button type="button">Previous</button></a> <span
+          id="divPages" class="bracket-list"></span> <a id="linkNext"><button type="button">Next</button></a>
         </span>
 
         <div id="boardContentLinks">
@@ -156,6 +157,7 @@
   </div>
 
   <footer id="footer"></footer>
+
 </body>
 
 <script src="/.static/js/crypto.js"></script>

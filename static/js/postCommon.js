@@ -21,7 +21,7 @@ postCommon.init = function() {
 
   postCommon.updateCurrentChar();
 
-  postCommon.selectedCell = '<div class="removeButton">✖</div>'
+  postCommon.selectedCell = '<div class="removeButton"></div>'
       + '<span class="nameLabel"></span><div class="spoilerPanel">'
       + '<input type="checkbox" class="spoilerCheckBox">Spoiler</div>';
 

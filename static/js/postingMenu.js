@@ -914,7 +914,7 @@ postingMenu.setExtraMenu = function(linkSelf) {
 
   var parentNode = linkSelf.parentNode;
 
-  var checkbox = parentNode.getElementsByClassName('deletionCheckBox')[0];
+  var checkbox = parentNode.getElementsByClassName('postButton')[0];
 
   parentNode.insertBefore(extraMenuButton, checkbox ? checkbox.nextSibling
       : parentNode.childNodes[0]);

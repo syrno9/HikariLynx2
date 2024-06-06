@@ -1,9 +1,10 @@
 .topBoards a, #divLatestImages img, #divLatestPosts .latestPostCell,
   .innerPost, .sideCatalogCell, .catalogCell {
-  background: #D6DAF0;
+  background: #182f3f;
   border-width: 1px;
-  border-style: none solid solid none;
-  border-color: #B7C5D9;
+  border-style: solid;
+  border-color: #82cece;
+  border-radius: 5px;
 }
 
 .theme_clear .topBoards a, .theme_clear #divLatestImages img,
@@ -134,7 +135,7 @@ hr {
   height: 0px;
   border-width: 1px medium medium;
   border-style: solid none none;
-  border-color: black;
+  border-color: #82cece;
 }
 
 .theme_cyber hr {
@@ -151,7 +152,7 @@ hr {
 
 a, .coloredIcon, .unhideButton, .embedButton, #selectedTab,
   #showFormsButton {
-  color: #34345C;
+  color: #fffab2;
   cursor: pointer;
 }
 
@@ -214,6 +215,7 @@ em {
 input, select, textarea {
   font-size: 80%;
   border: 1px solid #a9a9a9;
+  border-radius: 5px;
   font-family: sans-serif;
 }
 
@@ -234,15 +236,8 @@ input, select, textarea {
 }
 
 .selectedCell {
-  border: 2px dashed rgba(125, 125, 125, 0.4);
-  background-color: rgba(200, 200, 200, 0.5);
-  color: rgba(0, 0, 0, 0.5);
-  padding-left: 0.25em;
-  font-family: arial, helvetica, sans-serif;
-  font-size: 80%;
   font-weight: bold;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  font-size: 80%;
 }
 
 .theme_cyber .dropzone, .theme_cyber .selectedCell {
@@ -318,12 +313,12 @@ input[type=button], input[type=submit], button, .selectedCell {
 
 /* body styles, inherited by whole page */
 body {
-  color: #000;
-  background: #EEF2FF
-    url('/.static/fade-blue.png') repeat-x 50% 0%;
+  color: #acacac;
+  background: #0d1a1d;
   font-family: arial, helvetica, sans-serif;
   font-size: 100%;
   margin: 0px;
+  background-image: linear-gradient(to bottom,#182f3f9e 0,transparent 260px);
 }
 
 body.theme_cyber {
@@ -347,30 +342,28 @@ header {
 
 nav {
   height: 18px;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid #89A;
   padding-bottom: 3px;
-  background-color: #D6DAF0;
-  font-size: 10pt;
+  font-size: 11pt;
   text-align: center;
   z-index: 1;
+  color: #82cece;
 }
 
-.theme_cyber nav {
-  border-bottom: 1px solid #B0790A;
-  background-color: #151515;
-}
-
-.theme_clear nav {
-  background-color: #acacac;
+.banner {
+  border: 1px solid #82cece;
 }
 
 nav span, nav a {
   display: inline-block;
   text-decoration: none;
   margin: 0 0.2em;
+}
+
+nav a {
+  text-decoration: underline;
 }
 
 #navLinkSpan {
@@ -428,7 +421,6 @@ nav span, nav a {
 
 #divPages a {
   text-decoration: none;
-  padding: 0 0.25em;
   display: inline-block;
 }
 
@@ -540,8 +532,8 @@ footer {
 }
 
 .innerPost, .markedPost {
-  display: inline-block;
-  padding: 0.25em;
+  display: table;
+  padding: 0 0.25em 0 0;
   max-width: 100%;
 }
 
@@ -682,4 +674,20 @@ footer {
   #divLogs, .hashLabel {
     overflow-wrap: anywhere;
   }
+}
+
+.sidebar-wrapper-ontop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 210px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1;
+  visibility: visible;
+}
+
+.content-wrapper {
+  margin-left: 225px;
 }
