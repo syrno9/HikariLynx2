@@ -97,14 +97,13 @@ settingsMenu.registerTab = function(text, content, select) {
 
 settingsMenu.placeNavBarButton = function(settingsMenuDiv) {
 
-  var postingLink = document.getElementById('navPosting');
+  var postingLink = document.getElementById('settingsButtonPlace');
   var referenceNode = postingLink.nextSibling;
 
   postingLink.parentNode.insertBefore(document.createTextNode(' '),
       referenceNode);
 
   var divider = document.createElement('span');
-  divider.innerHTML = '/';
   postingLink.parentNode.insertBefore(divider, referenceNode);
 
   postingLink.parentNode.insertBefore(document.createTextNode(' '),
@@ -112,7 +111,9 @@ settingsMenu.placeNavBarButton = function(settingsMenuDiv) {
 
   var settingsButton = document.createElement('a');
   settingsButton.id = 'settingsButton';
-  settingsButton.className = 'coloredIcon';
+  settingsButton.className = 'boxLink';
+  settingsButton.style.fontSize = '75%';
+  settingsButton.style.padding = '2px 10px';
   postingLink.parentNode.insertBefore(settingsButton, referenceNode);
 
   settingsButton.onclick = function() {

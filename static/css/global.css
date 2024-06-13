@@ -3,7 +3,7 @@
   background: #182f3f;
   border-width: 1px;
   border-style: solid;
-  border-color: #82cece;
+  border-color: #82cece7a;
   border-radius: 5px;
 }
 
@@ -344,7 +344,6 @@ nav {
   height: 18px;
   position: absolute;
   top: 0;
-  width: 100%;
   padding-bottom: 3px;
   font-size: 11pt;
   text-align: center;
@@ -359,7 +358,6 @@ nav {
 nav span, nav a {
   display: inline-block;
   text-decoration: none;
-  margin: 0 0.2em;
 }
 
 nav a {
@@ -368,50 +366,11 @@ nav a {
 
 #navLinkSpan {
   float: left;
+  margin: 0 5px;
 }
 
 #navOptionsSpan {
   float: right;
-}
-
-#navLinkHome:before {
-  content: "\e078";
-}
-
-#navBoardList:before {
-  content: "\e09b";
-}
-
-#linkOverboard:before, #navOverboard:before {
-  content: "\e007";
-}
-
-#settingsButton:before {
-  content: "\e041";
-}
-
-#navPosting:before {
-  content: "\e09a";
-}
-
-#navCatalog:before {
-  content: "\e072";
-}
-
-#linkRss:before {
-  content: "\e0b7";
-}
-
-#linkTop:before {
-  content: "\e012";
-}
-
-#linkBottom:before {
-  content: "\e00f";
-}
-
-#linkBack:before {
-  content: "\e003";
 }
 
 /* board list */
@@ -454,11 +413,6 @@ span.spoiler {
 
 .spoiler:hover {
   color: #000;
-  background: none;
-}
-
-.theme_cyber .spoiler:hover {
-  color: #ACACAC;
   background: none;
 }
 
@@ -571,7 +525,7 @@ footer {
 }
 
 #navOverboard::after, #linkOverboard::after {
-  content: 'overboard';
+  content: 'Overboard';
 }
 
 #linkSfwOver::after {
@@ -583,15 +537,15 @@ footer {
 }
 
 #navLinkHome::after {
-  content: 'home';
+  content: 'Up to hikari3.ch';
 }
 
 #watcherButton::after {
-  content: 'watched threads';
+  content: 'Thread Watcher';
 }
 
 #settingsButton::after {
-  content: 'settings';
+  content: 'Settings';
 }
 
 #linkGlobalLogs::after {
@@ -681,13 +635,56 @@ footer {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 210px;
+  width: 225px;
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 1;
   visibility: visible;
+  border-right: 1px solid #82cece;
 }
 
 .content-wrapper {
   margin-left: 225px;
+}
+
+.box {
+  border: 1px solid #82cece;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.boxTitle {
+  text-align: left;
+  font-weight: bold;
+  font-size: 80%;
+  background-color: #182f3f;
+  padding: 5px 8px;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid #82cece;
+}
+
+.boxContent {
+  font-size: 75%;
+  vertical-align: middle;
+  text-align: left;
+  margin: 4px 0;
+  padding: 0 8px;
+}
+
+#sidebar ul,
+#sidebar .boxLink {
+  display: block;
+}
+
+#sidebar a {
+  text-decoration: none;
+}
+
+#sidebar a:hover {
+  text-decoration: none;
+  background-color: #182f3f;
+}
+
+.boxLink {
+
 }

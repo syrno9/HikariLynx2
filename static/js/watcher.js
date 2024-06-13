@@ -7,14 +7,13 @@ watcher.init = function() {
   watcher.watcherAlertCounter = 0;
   watcher.elementRelation = {};
 
-  var postingLink = document.getElementById('navPosting');
+  var postingLink = document.getElementById('watcherButtonPlace');
   var referenceNode = postingLink.nextSibling;
 
   postingLink.parentNode.insertBefore(document.createTextNode(' '),
       referenceNode);
 
   var divider = document.createElement('span');
-  divider.innerHTML = '/';
   postingLink.parentNode.insertBefore(divider, referenceNode);
 
   postingLink.parentNode.insertBefore(document.createTextNode(' '),
@@ -22,8 +21,9 @@ watcher.init = function() {
 
   var watcherButton = document.createElement('a');
   watcherButton.id = 'watcherButton';
-  watcherButton.className = 'coloredIcon';
-
+  watcherButton.className = 'boxLink';
+  watcherButton.style.fontSize = '75%';
+  watcherButton.style.padding = '2px 10px';
   watcher.watcherCounter = document.createElement('span');
 
   watcherButton.appendChild(watcher.watcherCounter);
@@ -327,7 +327,7 @@ watcher.addWatchedCell = function(board, thread, watchData) {
 
 watcher.processOP = function(op) {
 
-  var checkBox = op.getElementsByClassName('deletionCheckBox')[0];
+  var checkBox = op.getElementsByClassName('fat')[0];
 
   var nameParts = checkBox.name.split('-');
 
@@ -376,6 +376,9 @@ watcher.processOP = function(op) {
     localStorage.watchedData = JSON.stringify(storedWatchedData);
 
     watcher.addWatchedCell(board, thread, boardThreads[thread]);
+	
+    watchButton.className = 'watchedButton glowOnHover coloredIcon';
+    watchButton.title = "Watching Thread";
 
   };
 

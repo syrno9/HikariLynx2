@@ -1,15 +1,14 @@
-#watcherButton::before {
-  content: '\e065';
-  margin-right: 0.25em;
+.watchButton::before {
+  content: url(/.static/icons/h3circle.png);
 }
 
-.watchButton::before {
-  content: '\e065';
+.watchedButton::before {
+  content: url(/.static/icons/h3watch.png);
 }
 
 #closeWatcherMenuButton::before, .close-btn::before,
   .watchedCellCloseButton::before {
-  content: '\e0db';
+  content: url(/.static/icons/h3cross.png);
 }
 
 .watchedCell {

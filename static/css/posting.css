@@ -74,7 +74,7 @@ video {
   cursor: pointer;
 }
 
-.extraMenuButton, .hideButton, .watchButton {
+.extraMenuButton, .hideButton, .watchButton, .watchedButton {
   position: relative;
   top: 4px;
 }

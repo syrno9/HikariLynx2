@@ -10,7 +10,7 @@ themes.init = function() {
     id : 'cyber'
   } ];
 
-  var postingLink = document.getElementById('navPosting');
+  var postingLink = document.getElementById('themeButtonPlace');
 
   if (!postingLink) {
     return;
@@ -22,7 +22,6 @@ themes.init = function() {
       referenceNode);
 
   var divider = document.createElement('span');
-  divider.innerHTML = '/';
   postingLink.parentNode.insertBefore(divider, referenceNode);
 
   postingLink.parentNode.insertBefore(document.createTextNode(' '),
