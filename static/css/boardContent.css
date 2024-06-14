@@ -58,9 +58,20 @@
 }
 
 #newPostFieldset {
+  display: none;
+  border: none;
+  padding:0;
+}
+
+#blotterFieldset {
   display: inline-block;
   border: none;
   padding:0;
+  width: 468px;
+}
+
+#blotter {
+  text-align: center;
 }
 
 #postingForm {

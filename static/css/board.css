@@ -13,7 +13,7 @@
 
 .bracket-list {
   position: relative;
-  color: var(--text-color);
+  color: #acacac;
 }
 
 .bracket-list:not(:empty)::before {
@@ -27,7 +27,7 @@
 
 .bracket-list > *:not(:last-child)::after {
   content: "][";
-  color: var(--text-color);
+  color: #acacac;
   display: inline-block;
   font-size: 100%;
   pointer-events: none;
@@ -37,7 +37,7 @@
 
 .bracket-button::before,
 .bracket-button::after {
-  color: var(--text-color);
+  color: #acacac;
 }
 
 .bracket-button::before {
@@ -47,4 +47,12 @@
 .bracket-button::after {
   content: "]";
   margin-left: 2px;
+}
+
+.containPages {
+  background: #182f3f;
+  border: 1px solid #82cece;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 13px;
 }

@@ -40,10 +40,10 @@
   <script src="/.static/js/themeLoader.js"></script>
 
   <div class="sidebar-wrapper-ontop">
-  <div id="sidebar"></div>
+  <div id="sidebarBoard"></div>
   </div>
   <div class="content-wrapper">
-  <nav id="dynamicHeader"></nav>
+  <nav id="dynamicHeaderBoard"></nav>
   <header class="boardHeader">
     <img id="bannerImage" width=300 height=100 />
 <div style="margin: -5px 0;">
@@ -55,9 +55,23 @@
   <div style="text-align: center;">
     <iframe src="/php/rotatingImage.php" class="banner" scrolling="no" width="600" height="74" frameborder="0"></iframe></div>
   <hr style="margin:5px 1em;">
+<noscript>
+  <style>
+    #newPostFieldset {
+      display: inline-block !important;
+    }
+
+    #submitButton {
+      display: none;
+    }
+  </style>
+</noscript>
+<div id="submitButton" style="text-align:center;">
+[<button id="submitBtn" class="submitButton">Submit a Thread</button>]
+</div>
   <div id="postingForm">
   
-    <fieldset id="newPostFieldset">
+    <fieldset id="newPostFieldset" style="display: none">
 
       <form
         action="/newThread.js"
@@ -80,12 +94,14 @@
 	  • Images greater than 250x250 pixels will be thumbnailed
 	  </div>
       </form>
-      <hr style="margin: 5px 0 0;">
-      <table id="blotterTable"></table>
     </fieldset>
-
+    <div id="blotter">
+	<fieldset id="blotterFieldset">
+	<hr style="margin: 5px 0 0;">
+	<table id="blotterTable"></table>
+	</fieldset>
   </div>
-
+  </div>
   <div id="panelMessage">
     <hr>
     <div id="divMessage"></div>
@@ -116,6 +132,7 @@
   <hr style="margin:5px 1em;">
   <div style="text-align: center">
   <iframe src="/php/rotatingImage2.php" class="banner" scrolling="no" width="468" height="60" frameborder="0"></iframe></div>
+  <p style="text-align: center;margin: 0;"><a class="small" href="/"><u style="">Upload banners here!</u></a></p>
   <div id="threadList">
 
     <form
@@ -129,11 +146,16 @@
 
       <div class="threadPages">
 
-        <span class="divPages"> <a id="linkPrevious"><button type="button">Previous</button></a> <span
-          id="divPages" class="bracket-list"></span> <a id="linkNext"><button type="button">Next</button></a>
+      <div id="contain">
+
+        <span class="containPages"><a id="linkPrevious"><button type="button">Previous</button></a> </a> <span
+          id="divPages" class="bracket-list"></span> <a id="linkNext"><button type="button">Next</button></a> <span class="fHide">|</span> <a href="catalog.html" class="altButton1">Catalog</a>
         </span>
 
-        <div id="boardContentLinks">
+        <br>
+      </div>
+
+        <div class="hidden" id="boardContentLinks">
           <span>[</span>
           <a
             id="linkTop"
@@ -143,9 +165,6 @@
           <a id="linkManagement">Manage Board</a>
           <span>/</span>
           <a id="linkModeration">Moderate Board</a>
-          <span>/</span>
-          <a id="linkMod">Moderate Threads</a>
-          <span>]</span>
         </div>
 
       </div>
@@ -176,7 +195,7 @@
 <script src="/.static/js/embed.js"></script>
 <script src="/.static/js/postingMenu.js"></script>
 <script src="/.static/js/watcher.js"></script>
-<script src="/.static/js/bottomForms.js"></script>
 <script src="/.static/js/bypassUtils.js"></script>
+<script src="/.static/js/submitButton.js"></script>
 
 </html>

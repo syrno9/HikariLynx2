@@ -24,12 +24,6 @@ video {
   text-overflow: ellipsis;
 }
 
-.reportFieldset {
-  margin-top: 1em;
-  padding: 0.5em;
-  margin-bottom: 1em;
-}
-
 .labelId {
   color: #ffffff;
   padding: 0.25em;
@@ -60,6 +54,8 @@ video {
   white-space: nowrap;
   cursor: default;
   text-shadow: none;
+  font-size: 9pt;
+  border: 1px solid #82cece;
 }
 
 .theme_cyber .extraMenu, .theme_cyber .hideMenu {
@@ -72,6 +68,7 @@ video {
 
 .hideMenu div, .extraMenu div {
   cursor: pointer;
+  margin: 3px;
 }
 
 .extraMenuButton, .hideButton, .watchButton, .watchedButton {

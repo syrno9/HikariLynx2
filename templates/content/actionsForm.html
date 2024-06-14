@@ -1,73 +1,39 @@
-<fieldset class="reportFieldset">
-  <legend>Delete</legend>
-
+<div style="text-align: right;">
+<div class="reportFieldset">
   <div class="contentAction">
     <label>
-      Password
-      <input
-        type="text"
-        class="deletionField"
-        id="deletionFieldPassword"
-        name="password">
-    </label>
-    <label>
-      <input
-        type="checkbox"
-        class="deletionField"
-        id="checkboxOnlyFiles"
-        name="deleteUploads">
-      Delete only files (Removes the file reference to the posts)
-    </label>
-    <label>
-      <input
-        type="checkbox"
-        class="deletionField"
-        id="checkboxMediaDeletion"
-        name="deleteMedia">
-      Delete media (Removes the saved files from the server)
-    </label>
-    <button
-      type="submit"
-      id="deleteFormButton"
-      value="delete"
-      name="action">Delete</button>
-    <button
-      type="submit"
-      id="trashFormButton"
-      value="trash"
+	Delete Post: [
+      <input type="checkbox" class="deletionField" id="checkboxOnlyFiles" name="deleteUploads">
+	  File only ]
+      <input type="text" class="deletionField" id="deletionFieldPassword" style="width: 50px" name="password">
+	  <button type="submit" id="deleteFormButton" value="delete" name="action">Delete</button>
+    <button type="submit" id="trashFormButton" class="hidden" value="trash"
       name="action">Trash</button>
-
+	</label>
   </div>
-</fieldset>
+</div>
 
-<fieldset class="reportFieldset">
-  <legend>Report</legend>
-
+<div class="reportFieldset">
   <div class="contentAction">
 
     <label>
-      Reason
-      <input
-        type="text"
-        class="reportField"
-        id="reportFieldReason"
-        name="reasonReport">
-    </label>
-    <label id="reportCategoriesDiv">
-      Category
-      <select
-        class="reportField"
-        id="reportComboboxCategory"
-        name="categoryReport"></select>
-    </label>
-    <label>
+      Reason:
+      <input type="text" style="width: 50px" class="reportField" id="reportFieldReason" name="reasonReport">
       <input
         type="checkbox"
         class="reportField"
         id="checkboxGlobalReport"
         name="globalReport">
       Global
+	<div class="hidden">
+	<label id="reportCategoriesDiv">
+      Category
+      <select
+        class="reportField"
+        id="reportComboboxCategory"
+        name="categoryReport"></select>
     </label>
+	</div>
 
     <div id="divReportCaptcha">
       <img
@@ -91,6 +57,14 @@
       <a
         href="/noCookieCaptcha.js"
         class="small">no cookies?</a>
+    <label>
+      <input
+        type="checkbox"
+        class="deletionField"
+        id="checkboxMediaDeletion"
+        name="deleteMedia">
+      Delete media (Removes the saved files from the server)
+    </label>
       <br>
     </div>
 
@@ -231,4 +205,5 @@
       name="action">Spoil Files</button>
 
   </fieldset>
+</div>
 </div>
