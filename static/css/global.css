@@ -487,9 +487,9 @@ span.spoiler {
 /* footer styles */
 footer {
   width: 100%;
-  margin: 3em 0px 2em 0px;
+  margin: 1em 0px 0.5em 0px;
   text-align: center;
-  font-size: 75%;
+  font-size: 65%;
 }
 
 .innerPost, .markedPost {

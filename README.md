@@ -1,8 +1,8 @@
-**PenumbraLynx** is an updated version of [8TailedLynx](https://gitgud.io/obongo/8TailedLynx)'s Penumbra version.
+**HikariLynx** is an updated version of [PenumbraLynx](https://gitgud.io/LynxChan/PenumbraLynx).
 
 Install by cloning anywhere and then pointing it to the engine on the global settings. Make sure to check out the correct tag.
 
-To personalize your chan please read LynxChan's documentation on templates.
+Personalizing this will require a bit of work since it was made with hikari3.ch in mind. When personalizing your chan, read LynxChan's documentation on templates.
 
 The favicon in the static directory is served from mongo and will need to be uploaded into MongoDB manually. To do this you need to get the 
 mongofiles tool and run

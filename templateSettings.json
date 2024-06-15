@@ -3,6 +3,8 @@
     "dynamicHeader": "content/header.html",
     "dynamicHeaderBoard": "content/headerBoard.html",
     "dynamicHeaderThread": "content/headerThread.html",
+    "dynamicFooter": "content/footer.html",
+    "dynamicFooterBoard": "content/footerBoard.html",
     "postingTable": "content/postingForm.html",
     "actionsForm": "content/actionsForm.html",
     "blotterTable": "content/blotter.html",
