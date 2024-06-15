@@ -623,6 +623,7 @@ postingMenu.addToggleSettingButton = function(extraMenu, board, thread, index,
   extraMenu.appendChild(document.createElement('hr'));
 
   var toggleButton = document.createElement('div');
+  toggleButton.className = 'menuLink';
   toggleButton.innerHTML = postingMenu.threadSettingsList[index].label;
   toggleButton.onclick = function() {
     postingMenu.toggleThreadSetting(board, thread, index, innerPart);
@@ -673,6 +674,7 @@ postingMenu.setExtraMenuThread = function(extraMenu, board, thread, innerPart) {
     extraMenu.appendChild(document.createElement('hr'));
 
     var transferButton = document.createElement('div');
+	transferButton.className = 'menuLink';
     transferButton.innerHTML = 'Transfer Thread';
     transferButton.onclick = function() {
       postingMenu.transferThread(board, thread);
@@ -692,6 +694,7 @@ postingMenu.setExtraMenuThread = function(extraMenu, board, thread, innerPart) {
   extraMenu.appendChild(document.createElement('hr'));
 
   var archiveButton = document.createElement('div');
+  archiveButton.className = 'menuLink';
   archiveButton.innerHTML = 'Archive';
   archiveButton.onclick = function() {
 
@@ -705,6 +708,7 @@ postingMenu.setExtraMenuThread = function(extraMenu, board, thread, innerPart) {
   extraMenu.appendChild(document.createElement('hr'));
 
   var mergeButton = document.createElement('div');
+  mergeButton.className = 'menuLink';
   mergeButton.innerHTML = 'Merge';
   mergeButton.onclick = function() {
     postingMenu.mergeThread(board, thread);
@@ -719,6 +723,7 @@ postingMenu.setModFileOptions = function(extraMenu, innerPart, board, thread,
   extraMenu.appendChild(document.createElement('hr'));
 
   var spoilButton = document.createElement('div');
+  spoilButton.className = 'menuLink';
   spoilButton.innerHTML = 'Spoil Files';
   spoilButton.onclick = function() {
     postingMenu.spoilSinglePost(innerPart, board, thread, post);
@@ -732,6 +737,7 @@ postingMenu.setModFileOptions = function(extraMenu, innerPart, board, thread,
   extraMenu.appendChild(document.createElement('hr'));
 
   var deleteMediaButton = document.createElement('div');
+  deleteMediaButton.className = 'menuLink';
   deleteMediaButton.innerHTML = 'Delete Post And Media';
   extraMenu.appendChild(deleteMediaButton);
   deleteMediaButton.onclick = function() {
@@ -751,6 +757,7 @@ postingMenu.setExtraMenuMod = function(innerPart, extraMenu, board, thread,
   extraMenu.appendChild(document.createElement('hr'));
 
   var deleteByIpButton = document.createElement('div');
+  deleteByIpButton.className = 'menuLink';
   deleteByIpButton.innerHTML = 'Delete By Ip/bypass';
   deleteByIpButton.onclick = function() {
 
@@ -765,6 +772,7 @@ postingMenu.setExtraMenuMod = function(innerPart, extraMenu, board, thread,
   extraMenu.appendChild(document.createElement('hr'));
 
   var deleteByIpOnThreadButton = document.createElement('div');
+  deleteByIpOnThreadButton.className = 'menuLink';
   deleteByIpOnThreadButton.innerHTML = 'Delete By Ip/bypass within thread';
   deleteByIpOnThreadButton.onclick = function() {
 
@@ -779,6 +787,7 @@ postingMenu.setExtraMenuMod = function(innerPart, extraMenu, board, thread,
   extraMenu.appendChild(document.createElement('hr'));
 
   var banButton = document.createElement('div');
+  banButton.className = 'menuLink';
   banButton.innerHTML = 'Ban';
   banButton.onclick = function() {
     postingMenu.banSinglePost(innerPart, board, thread, post);
@@ -845,6 +854,7 @@ postingMenu.buildMenu = function(linkSelf, extraMenu) {
   }
 
   var reportButton = document.createElement('div');
+  reportButton.className = 'menuLink';
   reportButton.innerHTML = 'Report';
   reportButton.onclick = function() {
     postingMenu.showReport(board, thread, post);
@@ -854,6 +864,7 @@ postingMenu.buildMenu = function(linkSelf, extraMenu) {
   extraMenu.appendChild(document.createElement('hr'));
 
   var globalReportButton = document.createElement('div');
+  globalReportButton.className = 'menuLink';
   globalReportButton.innerHTML = 'Global Report';
   globalReportButton.onclick = function() {
     postingMenu.showReport(board, thread, post, true);
@@ -863,6 +874,7 @@ postingMenu.buildMenu = function(linkSelf, extraMenu) {
   extraMenu.appendChild(document.createElement('hr'));
 
   var deleteButton = document.createElement('div');
+  deleteButton.className = 'menuLink';
   deleteButton.innerHTML = 'Delete Post';
   extraMenu.appendChild(deleteButton);
   deleteButton.onclick = function() {
@@ -872,6 +884,7 @@ postingMenu.buildMenu = function(linkSelf, extraMenu) {
 
   extraMenu.appendChild(document.createElement('hr'));
   var trashButton = document.createElement('div');
+  trashButton.className = 'menuLink';
   trashButton.innerHTML = 'Trash Post';
   extraMenu.appendChild(trashButton);
   trashButton.onclick = function() {
@@ -889,6 +902,7 @@ postingMenu.buildMenu = function(linkSelf, extraMenu) {
     extraMenu.appendChild(document.createElement('hr'));
 
     var unlinkButton = document.createElement('div');
+	unlinkButton.className = 'menuLink';
     unlinkButton.innerHTML = 'Unlink Files';
     extraMenu.appendChild(unlinkButton);
     unlinkButton.onclick = function() {

@@ -33,7 +33,13 @@ video {
 
 .quoteTooltip {
   position: absolute;
-  display: none
+  display: none;
+}
+
+.quoteTooltip {
+  position: absolute;
+  display: none;
+  margin: 1px;
 }
 
 #formMore, #qrFormMore, #qrCaptchaButton, #qrFilesButton {
@@ -112,7 +118,7 @@ video {
 }
 
 .linkSelf:hover {
-  color: #ff0000;
+  font-weight: bold;
 }
 
 .linkQuote {
@@ -121,7 +127,7 @@ video {
 }
 
 .linkQuote:hover {
-  color: #ff0000;
+  font-weight: bold;
 }
 
 .labelSubject {
@@ -133,18 +139,29 @@ video {
 .labelRole {
   color: #ff0000;
   font-weight: bold;
+  margin-right: 5px;
 }
 
 .labelRole:before {
-  font-family: Icons;
-  content: "\e0dc";
-  color: #A00;
+  content: '##';
+  margin-right: 4px;
+}
+
+.labelRole:after {
+  content: url('/.static/icons/staff.png');
+  margin-left: 4px;
 }
 
 .divMessage {
   margin: 1em 1em 1em 3em;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+.markedPost {
+  background: #244860;
+  border: 1px solid #82cece;
+  color: #ffffff;
 }
 
 .divBanMessage {

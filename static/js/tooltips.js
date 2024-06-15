@@ -143,6 +143,11 @@ tooltips.checkHeight = function(tooltip) {
 
 }
 
+tooltips.isPostVisible = function(postId) {
+  var postElement = document.getElementById(postId);
+  return postElement && postElement.offsetParent !== null;
+}
+
 tooltips.processQuote = function(quote, backLink) {
 
   var tooltip;
@@ -154,6 +159,15 @@ tooltips.processQuote = function(quote, backLink) {
   }
 
   quote.onmouseenter = function() {
+    var matches = quoteUrl.match(/\/(\w+)\/res\/(\d+)\.html\#(\d+)/);
+    var postId = matches[3];
+
+    // Highlight the innerPost
+    tooltips.highlightPost(quoteUrl, true);
+
+    if (tooltips.isPostVisible(postId)) {
+      return;
+    }
 
     tooltip = document.createElement('div');
     tooltip.className = 'quoteTooltip';
@@ -196,12 +210,33 @@ tooltips.processQuote = function(quote, backLink) {
   };
 
   quote.onmouseout = function() {
+    // Remove highlight from the innerPost
+    tooltips.highlightPost(quoteUrl, false);
+
     if (tooltip) {
       tooltip.remove();
       tooltip = null;
     }
   };
 
+};
+
+tooltips.highlightPost = function(quoteUrl, highlight) {
+  var matches = quoteUrl.match(/\/(\w+)\/res\/(\d+)\.html\#(\d+)/);
+  var board = matches[1];
+  var post = matches[3];
+
+  var postElement = document.getElementById(post);
+  if (postElement) {
+    var innerPost = postElement.getElementsByClassName('innerPost')[0];
+    if (innerPost) {
+      if (highlight) {
+        innerPost.classList.add('markedPost');
+      } else {
+        innerPost.classList.remove('markedPost');
+      }
+    }
+  }
 };
 
 tooltips.generateHTMLFromData = function(postingData, tooltip, quoteUrl) {

@@ -336,7 +336,7 @@ body.theme_clear {
 
 /* header and nav / top of page styles */
 header {
-  margin: 1.6em auto 0 auto;
+  margin: 2em auto 0 auto;
   text-align: center;
 }
 
@@ -531,7 +531,7 @@ footer {
 }
 
 #navOverboard::after, #linkOverboard::after {
-  content: 'Overboard';
+  content: '/all/ - Overboard';
 }
 
 #linkSfwOver::after {
@@ -699,6 +699,15 @@ footer {
 
 }
 
+.menuLink {
+  color: #acacac;
+}
+  
+.menuLink:hover {
+  background: #182f3f;
+  color: #ff0000;
+}
+  
 .submitButton {
     font-size: large;
 	font-weight: bold;
