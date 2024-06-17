@@ -42,7 +42,7 @@
 
   <script src="/.static/js/themeLoader.js"></script>
 
-  <nav id="dynamicHeader"></nav>
+  <nav id="dynamicHeaderThread"></nav>
 
   <div
     class="hidden"
@@ -63,49 +63,69 @@
 
   <div id="mainPanel">
 
-    <header class="boardHeader">
-      <img id="bannerImage" />
-      <div>
-        <p id="labelName"></p>
+  <header class="boardHeader">
+    <img id="bannerImage" width=300 height=100 />
+	<div style="margin: -5px 0;">
+    <p id="labelName"></p>
+	</div> 
+    <p id="labelDescription"></p>
+  </header>
+
+  <hr width="90%">
+  <div style="text-align: center;">
+    <iframe src="/php/rotatingImage.php" class="banner" scrolling="no" width="600" height="74" frameborder="0"></iframe></div>
+  <hr style="margin:5px 1em;">
+  <span style="margin-left:15px;font-size: 11pt;">[<a href="..">Return</a>]</span>
+  	<div class="innerUtility top">
+	Posting mode: Reply
+	</div>
+<noscript>
+  <style>
+    #newPostFieldset {
+      display: inline-block !important;
+    }
+
+    #submitButton {
+      display: none;
+    }
+  </style>
+</noscript>
+<div id="submitButton" style="text-align:center;">
+[<button id="submitBtn" class="submitButton">Submit a Reply</button>]
+</div>
+  <div id="postingForm">
+  
+    <fieldset id="newPostFieldset" style="display: none">
+
+      <form
+        action="/newThread.js"
+        enctype="multipart/form-data"
+        method="post">
+
+        <table id="postingTable">
+        </table>
+	  <div style="font-size: 70%;text-align: left">• Before posting, make sure to read the <a href="/rules">rules</a></div>
+      <div style="font-size: 70%;text-align: left">
+        • Max file size: <span id="labelMaxFileSize"></span> 
       </div>
-      <p id="labelDescription"></p>
-    </header>
-
-    <div id="postingForm">
-
-      <fieldset id="newPostFieldset">
-        <legend>Mode: Reply</legend>
-
-        <form
-          action="/replyThread.js"
-          enctype="multipart/form-data"
-          method="post">
-
-          <input
-            type="hidden"
-            name="threadId"
-            id="threadIdentifier">
-
-          <table id="postingTable">
-          </table>
-
-          <p class="small">
-            Remember to follow the
-            <a
-              href="../rules.html"
-              class="rules">rules</a>
-          </p>
-
-          <button
-            type="submit"
-            id="formButton">Reply</button>
-
-        </form>
-
-      </fieldset>
-
-    </div>
-
+      <div style="font-size: 70%;text-align: left">
+        • Max files: <span id="labelMaxFiles"></span>
+      </div>
+	 <div style="font-size: 70%;text-align: left">
+	  • Supported file types: GIF, JPG, PNG, WebM, OGG, SWF
+	  </div>
+	  <div style="font-size: 70%;text-align: left">
+	  • Images greater than 150x150 pixels will be thumbnailed
+	  </div>
+      </form>
+    </fieldset>
+    <div id="blotter">
+	<fieldset id="blotterFieldset">
+	<hr style="margin: 5px 0 0 0;">
+	<table id="blotterTable"></table>
+	</fieldset>
+  </div>
+  </div>
     <div id="divControls">
 
       <form
@@ -314,7 +334,7 @@
       <hr>
       <div id="divMessage"></div>
     </div>
-
+	<span class="hidden">
     <div id="secondaryBar">
 
       <span>[</span>
@@ -335,7 +355,11 @@
       <span>]</span>
 
     </div>
-
+	</span>
+  <hr style="margin:5px 1em;">
+  <div style="text-align: center">
+  <iframe src="/php/rotatingImage2.php" class="banner" scrolling="no" width="468" height="60" frameborder="0"></iframe></div>
+  <p style="text-align: center;margin: 0;"><a class="small" href="/banners/"><u style="">Upload your banners here!</u></a></p>
     <div id="threadList">
 
       <form
@@ -346,7 +370,15 @@
         <div id="divThreads"></div>
 
         <hr class="clearer" />
-
+		<noscript>
+		  <style>
+		  .posterCountText {
+			left: 15px;
+		  }
+		  </style>
+		</noscript>
+		<div class="posterCountText">Unique posters:
+		<span id="userCountLabel"></span></div>
         <div class="divRefresh hidden">
 
           <input
@@ -363,8 +395,7 @@
           </label>
 
         </div>
-
-        <div id=boardContentLinks>
+        <div class="hidden" id=boardContentLinks>
           <span>[</span>
           <a
             id="linkTop"
@@ -374,7 +405,7 @@
           <a id="linkManagement">Manage Board</a>
           <span>/</span>
           <a id="linkMod">Moderate Thread</a>
-          <span>/</span> Unique posters: <span id="userCountLabel"></span> <span>]</span>
+          <span>/</span><span>]</span>
         </div>
 
         <div id="actionsForm"></div>
@@ -383,12 +414,13 @@
 
     </div>
 
-    <footer id="footer"></footer>
+    <footer id="dynamicFooterBoard"></footer>
   </div>
 
 </body>
 
 <script src="/.static/js/crypto.js"></script>
+<script src="/.static/js/banner.js"></script>
 <script src="/.static/js/api.js"></script>
 <script src="/.static/js/postCommon.js"></script>
 <script src="/.static/js/captchaModal.js"></script>
@@ -407,9 +439,8 @@
 <script src="/.static/js/postingMenu.js"></script>
 <script src="/.static/js/watcher.js"></script>
 <script src="/.static/js/gallery.js"></script>
-<script src="/.static/js/favouriteBoards.js"></script>
-<script src="/.static/js/sideCatalog.js"></script>
-<script src="/.static/js/bottomForms.js"></script>
 <script src="/.static/js/bypassUtils.js"></script>
+<script src="/.static/js/sideCatalog.js"></script>
+<script src="/.static/js/submitButton.js"></script>
 
 </html>
