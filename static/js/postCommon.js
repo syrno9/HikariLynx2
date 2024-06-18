@@ -89,24 +89,7 @@ postCommon.init = function() {
     postCommon.setFlagPreviews(flagCombo);
   }
 
-  var formMore = document.getElementById('formMore');
-  formMore.classList.toggle('hidden');
-
   var toggled = false;
-
-  var extra = document.getElementById('extra');
-  extra.classList.toggle('hidden');
-
-  formMore.children[0].onclick = function() {
-
-    extra.classList.toggle('hidden');
-    formMore.children[0].innerHTML = toggled ? 'More' : 'Less';
-
-    toggled = !toggled;
-
-    localStorage.setItem('showExtra', toggled);
-
-  };
 
   if (localStorage.showExtra && JSON.parse(localStorage.showExtra)) {
     formMore.children[0].onclick();

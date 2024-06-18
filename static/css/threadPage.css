@@ -1,4 +1,23 @@
 /*Elements exclusive from the thread page*/
+.threadHide {
+  display: none;
+}
+
+.innerUtility.top {
+  color: aliceblue;
+  background-color: #E04000;
+  margin: 2px 1em;
+  width: calc(100% - 2em);
+  text-align: center;
+  font-weight: bold;
+  padding: 1px 0;
+  font-size: 11pt;
+}
+
+.innerUtility.top a {
+  color: var(--thread-navbar-color);
+}
+
 .divRefresh {
   padding: 0;
   height: 1.5em;
@@ -15,7 +34,7 @@
 }
 
 #divControls, #transferControls, #ipDelete, #divArchive, #divMerge {
-  margin: 1em;
+  margin: 0 1em;
 }
 
 .post-table td {
@@ -122,4 +141,11 @@
 
 .handle {
   cursor: move;
+}
+
+.posterCountText {
+  position: absolute;
+  right: 15px;
+  font-size: 10pt;
+  font-weight: bold;
 }

@@ -314,7 +314,7 @@ input[type=button], input[type=submit], button, .selectedCell {
 /* body styles, inherited by whole page */
 body {
   color: #acacac;
-  background: #0d1a1d;
+  background: #0d1a1d no-repeat;
   font-family: arial, helvetica, sans-serif;
   font-size: 100%;
   margin: 0px;
@@ -352,7 +352,7 @@ nav {
   font-size: 11pt;
   text-align: center;
   color: #82cece;
-  width: calc(100% - 225px);;
+  width: 100%;
   z-index: 1;
   border-bottom: 1px solid;
   background: #182f3f;
@@ -756,4 +756,147 @@ footer {
 
 #galleryLink:after {
   content: "Gallery";
+}
+
+.expandButton {
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+}
+
+.expandButton::before {
+  content: url(/.static/icons/h3plus.png);
+}
+
+.collapseButton {
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+}
+
+.collapseButton::before {
+  content: url(/.static/icons/h3minus.png);
+}
+
+.divFortune {
+  animation: rainbow 2s infinite;
+  font-weight: bold;
+}
+
+.divFortune::before {
+  content: "Your fortune: ";
+}
+
+.excellentLuck {
+	font-weight: bold;
+    color: #FD4D32;
+}
+
+.goodLuck {
+	font-weight: bold;
+    color: #E7890C;
+}
+
+.averageLuck {
+	font-weight: bold;
+    color: #BAC200;
+}
+
+.badLuck {
+	font-weight: bold;
+    color: #7FEC11;
+}
+
+.tellYouNow {
+	font-weight: bold;
+    color: #2A56FB;
+}
+
+.outlookGood {
+	font-weight: bold;
+    color: #6023F8;
+}
+
+.veryBadLuck {
+	font-weight: bold;
+    color: #9D05DA;
+}
+
+.godlyLuck {
+	font-weight: bold;
+    color: #D302A7;
+}
+
+.youAreBanned {
+	font-weight: bold;
+    color: red;
+}
+
+.s1 {
+  font-size: 70%;
+}
+
+.s2 {
+  font-size: 120%;
+}
+
+.s3 {
+  font-size: 140%;
+}
+
+.s4 {
+  font-size: 160%;
+}
+
+.s5 {
+  font-size: 180%;
+}
+
+.s6 {
+  font-size: 200%;
+}
+
+.s7 {
+  font-size: 220%;
+}
+
+.powerful {
+  animation: rainbow 0.5s infinite;
+  text-shadow: -1px 0 4px var(--border-color), 1px 1px 1px var(--menu-color), 2px 0 10px var(--marked-color);
+}
+
+.c1 {
+  color: red;
+}
+
+.c2 {
+  color: orange;
+}
+
+.c3 {
+  color: brown;
+}
+
+.c4 {
+  color: purple;
+}
+
+.c5 {
+  color: pink;
+}
+
+.c6 {
+  color: yellow;
+}
+
+.c7 {
+  color: green;
+}
+
+.c8 {
+  color: blue;
+}
+
+.c9 {
+  color: lightblue;
 }

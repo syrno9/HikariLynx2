@@ -9,11 +9,6 @@ sideCatalog.init = function() {
 
   sideCatalog.sideCatalogDiv = document.getElementById('sideCatalogDiv');
 
-  if (!localStorage.hideSideCatalog) {
-    sideCatalog.sideCatalogDiv.style.display = 'block';
-    sideCatalog.mainBody.className = 'mainPanelWithSideCatalog';
-  }
-
   sideCatalog.refreshSideCatalog();
 
   document.getElementById('closeSideCatalogButton').onclick = function() {

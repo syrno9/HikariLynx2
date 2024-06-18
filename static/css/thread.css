@@ -1,24 +1,18 @@
 /*Elements that show on threads on both catalogs and regular posting places*/
 
-.lockIndicator:before, .pinIndicator:after, .archiveIndicator:after, .cyclicIndicator:after, .bumpLockIndicator:after { 
-  font-family: Icons;
-  color: #A00;
-}
-
 .lockIndicator:before {
-  content: "\e08a";
-}
-
-#galleryLink:before {
-  content: "\e083";
+  content: url(/.static/icons/locked.gif);
 }
 
 .pinIndicator:after {
-  content: "\e0a8";
+  content: url(/.static/icons/h3sticky.png);
 }
 
 .archiveIndicator:after {
-  content: "\e023";
+  content: "Archived";
+  background-size: 11pt;
+  font-size: 12pt;
+  font-weight: bold;
 }
 
 .cyclicIndicator:after {
@@ -26,7 +20,10 @@
 }
 
 .bumpLockIndicator:after {
-  content: "\e0db";
+  content: "AS";
+  background-size: 11pt;
+  font-size: 12pt;
+  font-weight: bold;
 }
 
 .galleryImage {

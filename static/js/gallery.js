@@ -24,13 +24,10 @@ gallery.init = function() {
   galleryLink.className = 'coloredIcon';
   backLink.parentNode.insertBefore(galleryLink, backLink);
 
-  backLink.parentNode.insertBefore(document.createTextNode(' '), backLink);
 
   var separator = document.createElement('span');
-  separator.innerHTML = '/';
   backLink.parentNode.insertBefore(separator, backLink);
 
-  backLink.parentNode.insertBefore(document.createTextNode(' '), backLink);
 
   var outerPanel;
 

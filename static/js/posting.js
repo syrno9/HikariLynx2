@@ -6,7 +6,8 @@ posting.init = function() {
   api.noReportCaptcha = !document.getElementById('divReportCaptcha');
   posting.highLightedIds = [];
 
-  posting.postCellTemplate = '<div class="innerPost"><h3 class="labelBoard"></h3><div class="postInfo title">'
+  posting.postCellTemplate = ' <div class ="mobileHide" style="float: left; margin-right: 3px; font-size: small">>></div> '
+	  +	'<div class="innerPost"><h3 class="labelBoard"></h3><div class="postInfo title">'
       + '<input type="checkbox" class="deletionCheckBox"> <span class="labelSubject">'
       + '</span> <a class="linkName"></a> <img class="imgFlag"> <span class="labelRole">'
       + '</span> <span class="labelCreated"></span> <span class="spanId"> Id:<span '
@@ -14,6 +15,7 @@ posting.init = function() {
       + 'class="linkSelf">No.</a> <a class="linkQuote"></a> <a class="linkEdit">[Edit]</a> '
       + '<a class="linkHistory">[History]</a> <a class="linkFileHistory">[File history]</a>'
       + ' <a class="linkOffenseRecord">[Offense record]</a>'
+	  + ' <a class="postButton"></a> '
       + ' <span class="panelBacklinks"></span></div>'
       + '<div class="panelASN">ASN: <span class="labelASN"></span> </div>'
       + '<div class="panelBypassId"> Bypass Id: <span class="labelBypassId"></span> </div>'

@@ -10,20 +10,11 @@ watcher.init = function() {
   var postingLink = document.getElementById('watcherButtonPlace');
   var referenceNode = postingLink.nextSibling;
 
-  postingLink.parentNode.insertBefore(document.createTextNode(' '),
-      referenceNode);
-
   var divider = document.createElement('span');
   postingLink.parentNode.insertBefore(divider, referenceNode);
 
-  postingLink.parentNode.insertBefore(document.createTextNode(' '),
-      referenceNode);
-
   var watcherButton = document.createElement('a');
   watcherButton.id = 'watcherButton';
-  watcherButton.className = 'boxLink';
-  watcherButton.style.fontSize = '75%';
-  watcherButton.style.padding = '2px 10px';
   watcher.watcherCounter = document.createElement('span');
 
   watcherButton.appendChild(watcher.watcherCounter);
