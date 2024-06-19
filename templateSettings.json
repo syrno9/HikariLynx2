@@ -7,10 +7,7 @@
     "dynamicFooterBoard": "content/footerBoard.html",
     "postingTable": "content/postingForm.html",
     "actionsForm": "content/actionsForm.html",
-    "blotterTable": "content/blotter.html",
-	"sidebar": "content/sidebar.html",
-	"sidebarBoard": "content/sidebarBoard.html",
-	"sidebarThread": "content/sidebarThread.html"
+    "blotterTable": "content/blotter.html"
   },
   "templated": [
     "pages/about.html",
@@ -18,7 +15,8 @@
     "pages/globalRules.html",
     "pages/links.html",
     "pages/moderation.html",
-    "pages/posting.html"
+    "pages/posting.html",
+    "pages/ban.html"
   ],
   "logIndexCell": "cells/logIndexCell.html",
   "accountPage": "pages/account.html",

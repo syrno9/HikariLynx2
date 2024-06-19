@@ -15,32 +15,19 @@
   <script src="/.static/js/themeLoader.js"></script>
 
   <nav id="dynamicHeader"></nav>
-
-  <header>
-    <img
-      src="/.static/logo.png"
-      class="logoImg"
-      alt="logo" />
-  </header>
-
-  <div id="settingsWrapper">
-
-    <fieldset id="settingsFieldset">
-
-      <legend>Banned</legend>
-
-      <p>
-        <span id="descriptionLabel"></span>
-      </p>
-      <p id="reasonPanel">
-        Reason: <span id="reasonLabel"></span>
-      </p>
-      <p id="expirationPanel">
-        Expiration: <span id="expirationLabel"></span>
-      </p>
-      <p>
-        Ban ID: <span id="idLabel"></span>
-      </p>
+  <div class="staticWrapper">
+  <div class="box">
+    <div class="boxTitle">You are banned! ;_;</div>
+	<div class="boxContent">
+	  <img src="/.static/b&amp;.jpg" style="float: right;" width="250">
+      <span id="descriptionLabel"></span>
+      <span id="reasonPanel">
+        for the following reason: <br><br><b>"<span id="reasonLabel"></span>"</b><br><br>
+      </span>
+      <span id="expirationPanel">
+        This ban will expire at: <b><span id="expirationLabel"></span></b><br><br>
+      </span>
+        Your ban ID: <span id="idLabel"></span>
 
       <hr />
 
@@ -68,11 +55,7 @@
           id="buttonFormAppeal">
 
       </form>
-
-    </fieldset>
-
-  </div>
-
+	</div>
 </body>
 
 <script src="/.static/js/api.js"></script>

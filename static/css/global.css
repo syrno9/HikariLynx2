@@ -670,11 +670,18 @@ footer {
 }
 
 .boxContent {
-  font-size: 75%;
+  font-size: 85%;
   vertical-align: middle;
   text-align: left;
   margin: 4px 0;
   padding: 0 8px;
+}
+
+.staticWrapper {
+  max-width: 1000px;
+  padding-right: 0.5em;
+  margin: 2em auto;
+  text-align: center;
 }
 
 #sidebar ul,
@@ -756,6 +763,10 @@ footer {
 
 #galleryLink:after {
   content: "Gallery";
+}
+
+.spanId {
+  display: none;
 }
 
 .expandButton {

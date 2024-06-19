@@ -158,9 +158,7 @@ api.getCookies = function() {
 };
 
 api.handleConnectionResponse = function(xhr, callback, silent) {
-
   var response;
-
   try {
     response = JSON.parse(xhr.responseText);
   } catch (error) {
@@ -169,114 +167,26 @@ api.handleConnectionResponse = function(xhr, callback, silent) {
     }
     return;
   }
-
   if (response.status === 'error') {
-
     if (!silent) {
       alert(response.data);
     }
-
-  } else if (response.status === 'hashBan') {
-
-    var desc = '';
-
-    var bans = response.data;
-
-    for (var i = 0; i < bans.length; i++) {
-      var ban = bans[i];
-
-      if (i) {
-        desc += '\n';
-      }
-
-      desc += 'File ' + ban.file + ' is banned from '
-          + (ban.boardUri ? '/' + ban.boardUri + '/' : 'all boards.');
-
-      if (ban.reason) {
-        desc += ' Reason: ' + ban.reason + '.';
-      }
-
-    }
-
-    alert(desc);
   } else if (response.status === 'bypassable') {
-
     postCommon.displayBlockBypassPrompt(function() {
       alert('You may now post');
     });
-
   } else if (response.status === 'maintenance') {
-
     if (!silent) {
       alert('The site is undergoing maintenance and all of its functionalities are temporarily disabled.');
     }
-
   } else if (response.status === 'banned') {
-
-    var message;
-
-    if (response.data.range) {
-      message = 'Your ip range ' + response.data.range
-          + ' has been banned from ' + response.data.board + '.';
-    } else if (response.data.asn) {
-      message = 'Your ASN ' + response.data.asn + ' has been banned from '
-          + response.data.board + '.';
-    } else if (response.data.warning) {
-      message = 'You have been warned on ' + response.data.board + '.';
-    } else {
-      message = 'You are banned from ' + response.data.board + '.';
-    }
-
-    if (response.data.reason) {
-      message += '\nReason: "' + response.data.reason + '".';
-    }
-
-    if (response.data.warning) {
-      return alert(message);
-    }
-
-    if (response.data.expiration) {
-
-      message += '\nThis ban will expire at '
-          + new Date(response.data.expiration).toString() + '.';
-
-    } else {
-      message += '\nThis ban will not expire.'
-    }
-
-    message += '\nYour ban id: ' + response.data.banId + '.';
-
-    if (!response.data.appealled) {
-      message += '\nYou may appeal this ban.';
-
-      var appeal = prompt(message, 'Write your appeal');
-
-      if (appeal) {
-
-        api.formApiRequest('appealBan', {
-          appeal : appeal,
-          banId : response.data.banId
-        }, function appealed(status, data) {
-
-          if (status !== 'ok') {
-            alert(data);
-          } else {
-            alert('Ban appealed');
-          }
-
-        });
-
-      }
-
-    } else {
-      alert(message);
-    }
-
+    var banData = encodeURIComponent(JSON.stringify(response.data));
+    window.location.href = '/.static/pages/ban.html?data=' + banData;
   } else {
     callback(response.status, response.data);
   }
-
 };
+
 
 api.formApiRequest = function(page, parameters, callback, silent, getParameters) {
 
